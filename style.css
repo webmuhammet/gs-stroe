@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap');
+
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*header bölümü*/
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+nav > a,
+nav > ul > li > a{
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+nav > ul > li{
+    float: left;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    list-style: none
+}
+
+nav > a,
+nav > ul > li > a:hover{
+    color: yellow;
+    border-radius: 40px;
+    background-color:red;
+    padding: 0.5rem;
+}
+
+/*main bölümü*/
+main{
+    display: grid;
+    grid-template-areas: 
+    "section1 img"
+    "section2 img";
+}
+main:nth-child(1){grid-area: section1;}
+main:nth-child(2){grid-area: section2;}
+main:nth-child(3){grid-area: img;}
