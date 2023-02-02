@@ -1,51 +1,168 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
 
- *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box; 
+   font-family: 'Ubuntu', sans-serif;
 }
 
+body{
+  background-color: white;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  
+}
 
-/*header bölümü*/
-nav{
+/*header*/
+header > nav{
+  display: flex;
+  flex-direction: row;
+ align-items: center;
+  justify-content: space-between;
+  margin: 1.5rem;
+}
+
+@media (max-width: 1000px){
+  header > nav > ul{
     display: flex;
-    justify-content: space-between;
-    padding: 1rem;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  header > nav > ul > li{
+    margin: 10px 10px;
+    justify-content: center;
+    display: flex;
+  }
+
+  header > nav{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .one{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .one > article{
+    margin-bottom: 50px;
+  }
+
+  #sayfa-resmi{
+    width: 500px;
+  }
 }
 
-nav > a,
-nav > ul > li > a{
-    color: black;
-    text-decoration: none;
-    text-transform: uppercase;
+header > nav > ul{
+  list-style: none;
+  display: flex;
 }
-
-nav > ul > li{
-    float: left;
-    margin-left: 2rem;
-    margin-right: 2rem;
-    list-style: none
+header>nav>ul >li>a,
+header > nav > a{
+  
+  margin-left: 5rem;
+  margin-right: 5rem;
+  color:red ;
+  text-decoration: none;
+  text-transform: uppercase; 
+  padding: 10px;
+  transition: 500ms;
 }
-
-nav > a,
-nav > ul > li > a:hover{
-    color: yellow;
-    border-radius: 40px;
-    background-color:red;
-    padding: 0.5rem;
+ul>li>a:hover{
+  border-radius: 60px;
+  border-bottom: solid 2px yellow;
 }
-
 
 
 /*main bölümü*/
 main{
-    display: grid;
-    grid-template-areas: 
-    "section1 img"
-    "section2 img";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
 }
-main:nth-child(1){grid-area: section1;}
-main:nth-child(2){grid-area: section2;}
-main:nth-child(3){grid-area: img;}
+
+main > section{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 5rem;
+}
+section > article > h2,
+section > article> h4{color: rgb(0, 0, 0);   margin-top: 2.5rem;}
+section > article > h2{font-size: 60px; text-transform: uppercase;   margin-left: auto;}
+section > article > h4{font-size: 30px; text-transform: uppercase;}
+/*---*/
+#sayf-resmi{
+  height: auto;
+  width: 50%;
+}
+#motor-resmi{
+  display: flex;
+  flex-direction: row;
+  width: 10%;
+  height: auto;
+}
+
+/*alt kısım*/
+.second{
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  margin: 1rem;
+}
+
+@media (max-width: 600px){
+  .second{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .second > article{
+    height: 10vh;
+    width: 100%;
+  }
+}
+
+.second > article{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: auto;
+  background-color:azure;
+  border-radius: 25px;
+  padding: 2rem;  
+}
+
+#tit{
+  text-transform: uppercase;
+  color: rgb(0, 0, 0);
+  font-size: 250%;
+}
+
+#ciz{
+  width: 100%;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  opacity: 0.5;
+}
+
+#evforma{
+ height: auto;
+ width: 75%;
+ object-fit:contain
+}
+
+#res{
+  width: 75%;
+  object-fit: contain;
+}
