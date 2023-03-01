@@ -1,1 +1,1 @@
-# gs-stroe
+# gs-store
